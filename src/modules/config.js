@@ -11,6 +11,7 @@ const parser = new ArgumentParser({
 parser.add_argument('-v', '--version', { action: 'version', version })
 parser.add_argument('-i', '--input', { help: 'path to BigBlueButton published presentation', required: true })
 parser.add_argument('-o', '--output', { help: 'path to outfile', required: true })
+parser.add_argument('-t', '--threads', { help: 'Threads numbers', required: false, default=1 })
 
 const arguments = parser.parse_args()
 validateArguments(arguments)
